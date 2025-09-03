@@ -1,0 +1,52 @@
+import Text from "../Text.jsx";
+import "./Card.css";
+
+function Card({ className }) {
+  return (
+    <div className="relative overflow-hidden">
+      <div
+        className={
+          className
+            ? className + " card w-full h-[80vh] lg:px-[20em] "
+            : "card bg-amber-50 w-full h-[100vh]"
+        }
+      >
+        <h1 className="text-white text-shadow-2xs text-5xl font-bold md:text-9xl sm:mb-5">
+          Anúncios
+        </h1>
+        <div className="conteudo sm:text-center md:text-left md:w-[500px]">
+          <p className="text-white mb-2">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam,
+            expedita? Nulla repellendus voluptates ipsa nobis alias sed dolorum
+            quisquam deleniti maiores eos quia modi facere aspernatur, non fuga
+            sapiente vitae.
+          </p>
+          <p className="text-white mb-2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit..
+          </p>
+        </div>
+        <div className="flex gap-5">
+          <button
+            className="
+                            md:w-50
+                            bg-red-500 text-white md:text-2xl px-5 py-2 cursor-pointer rounded"
+          >
+            Solicitar
+          </button>
+          <button className="border-white border text-white hover:bg-white hover:text-black transition md:text-2xl px-5 md:py-2 cursor-pointer rounded">
+            Carrinho
+          </button>
+        </div>
+      </div>
+      <div className="w-100 h-100 bg-white absolute -z md:-right-1/12 -top-[300px] -right-1/7 rounded-[50%] text-5xl text-black text-center flex flex-col justify-center"></div>
+      <div className="w-[80%] h-200 bg-white absolute md:right-1/5 md:left-1/10 -bottom-185 right-1/7 left-1/7 text-5xl text-black text-center flex flex-col justify-center"></div>
+      <div className="absolute text-white bottom-15 text-9xl text-center items-center flex justify-center left-30 right-30">
+        <span className="pontoAtivo">.</span>
+        <span className="">.</span>
+        <span className="">.</span>
+      </div>
+    </div>
+  );
+}
+
+export default Card;

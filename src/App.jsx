@@ -1,6 +1,14 @@
 import { useState } from "react";
 import Tasks from "./components/Tasks.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Button from "./components/Button/Button.jsx";
+import Text from "./components/Text.jsx";
+import Image from "./components/Image.jsx";
+import People from "./assets/images/people/image.jpg";
+import Card from "./components/Card/Card.jsx";
+import Sobre from "./components/Sobre";
 import "./App.css";
+import Servicos from "./components/Servicos/Servicos.jsx";
 
 function App() {
   let [tasks, setTasks] = useState([
@@ -15,15 +23,23 @@ function App() {
       name: "Learn react",
       description: "Desenvolver as habilidades",
       isCompleted: false,
-    }
+    },
   ]);
   return (
-    <div className="w-screen h-screen bg-slate-500 flex justify-center p-6">
-      <div className="w-[500px]">
-        <h1 className="text-3xl text-slate-100 font-bold text-center">Gerenciador de tarefas</h1>
-        <Tasks tasks={tasks}/>
-      </div>
-    </div>
+    <>
+      <Navbar />
+      <Card
+        className="p-5
+          md:p-52 md:gap-6
+          sm:gap-3 sm:p-5 flex flex-col justify-center md:items-start sm:items-center
+      "
+      />
+      <Servicos
+        className="p-5 flex flex-col justify-center items-center
+      "
+      />
+      <Sobre />
+    </>
   );
 }
 

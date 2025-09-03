@@ -1,0 +1,16 @@
+@tailwindcss;
+
+.card {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.466),
+      rgba(0, 0, 0, 0.432)
+    ),
+    url(../../assets/images/fundo2.jpg);
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.pontoAtivo {
+  color: black;
+}
