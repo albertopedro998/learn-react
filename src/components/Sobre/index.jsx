@@ -1,12 +1,19 @@
-import { useRef, useState } from "react";
+import { useState, useEffect } from "react";
 import Titulo from "../Titulo";
 import destaqueSobre from "../../assets/images/Macbook-Air-localhost.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
 import { faHistory, faPeopleGroup, faToolbox } from '@fortawesome/free-solid-svg-icons'
-import { faReact } from "@fortawesome/free-brands-svg-icons";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Sobre({ className }) {
+  useEffect(()=>{
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-out"
+    })
+  })
   const [bordaP, setBordaP] = useState(
     "border-b-2 border-b-blue-500 w-0 mx-auto  transition-[1s] p-1 mb-3"
   );
@@ -23,7 +30,7 @@ function Sobre({ className }) {
       onMouseOut={minimizarBorda}
     >
       <div className="secao-titulo">
-        <Titulo as="h2" className={`text-blue-500 text-center mb-1 `}>
+        <Titulo as="h2" className={`text-blue-500 text-center mb-1 `} data-aos="zoom-out">
           Quem somos?
         </Titulo>
         {/* <p className="text-red-500 sm:text-xs md:text-2xl md:text-center px-5">
@@ -34,20 +41,20 @@ function Sobre({ className }) {
 
       <div id="secao-conteudo" className="flex justify-center items-center p-5 md:flex-nowrap flex-wrap">
         <div className="flex-1 text-justify order-2 p-5 flex flex-col gap-5">
-            <Titulo as="h3" className={`text-blue-500  `}>
+            <Titulo as="h3" className={`text-blue-500  `} data-aos="zoom-out">
                 <FontAwesomeIcon icon={faHistory} className="mr-5 animate-spin"/>
                 História
                 <small className="text-red-600 block text-xs md:text-xl">
                     Mais de 20 anos no mercado, trazendo o melhor para si.
                 </small>
             </Titulo>
-            <p className="">
+            <p className="" data-aos="fade-down">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima nam vel
                 omnis quia aperiam, exercitationem, tenetur illum unde explicabo ipsum
                 cum asperiores. Voluptatum, consectetur quaerat quos enim fuga animi
                 accusantium.
             </p>
-            <p className="">
+            <p className="" data-aos="fade-down">
                 Non magni
                 facilis cum saepe quisquam dolorem modi omnis, distinctio ratione
                 doloremque reprehenderit deserunt delectus temporibus suscipit? Fuga
@@ -55,21 +62,21 @@ function Sobre({ className }) {
                 earum!
             </p>
             <div className="marcos-hist flex justify-center md:justify-between gap-5 flex-wrap md:flex-nowrap">
-                <div className="text-center">
+                <div className="text-center p-5 shadow-2xl rounded-2xl" data-aos="fade-up">
                     <p className="text-green-500 text-2xl mb-3">
-                        <FontAwesomeIcon icon={faPeopleGroup} className="text-gray-600 text-2xl mr-5" />
+                        <FontAwesomeIcon icon={faPeopleGroup} className="text-green-600 text-2xl mr-5" />
                         5020
                     </p>
                     <p className="uppercase">Clientes satisfeitos</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center p-5 shadow-2xl rounded-2xl" data-aos="fade-up">
                     <p className="text-blue-500 text-2xl mb-3">
                         <FontAwesomeIcon icon={faToolbox} className="text-blue-600 text-2xl mr-5" />
                         7120
                     </p>
                     <p className="uppercase">Projetos concluidos</p>
                 </div>
-                <div className="text-center">
+                <div className="text-center p-5 shadow-2xl rounded-2xl" data-aos="fade-up">
                     <p className="text-red-500 text-2xl mb-3">
                         <FontAwesomeIcon icon={faHeart} className="text-red-600 text-2xl mr-5" />
                         4897
@@ -78,7 +85,7 @@ function Sobre({ className }) {
                 </div>
             </div>
         </div>
-        <img src={destaqueSobre} alt="" className="flex-1 w-100 h-100 order-1" />
+        <img src={destaqueSobre} alt="" className="flex-1 w-100 h-100 order-1 hover:scale-105 transition-[1s]" data-aos="zoom-in"/>
       </div>
     </div>
   );

@@ -28,14 +28,12 @@ function App() {
   return (
     <>
       <Navbar />
-      <Card
-        className="p-5
+      <Card className="p-5
           md:p-52 md:gap-6
           sm:gap-3 sm:p-5 flex flex-col justify-center md:items-start sm:items-center
       "
       />
-      <Servicos
-        className="p-5 flex flex-col justify-center items-center
+      <Servicos className="p-5 flex flex-col justify-center items-center
       "
       />
       <Sobre />

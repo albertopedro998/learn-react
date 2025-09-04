@@ -2,9 +2,18 @@ import softwareImg from "../../assets/images/software1600b.webp";
 import dominioImg from "../../assets/images/dominio-.com_.webp";
 import webSiteImg from "../../assets/images/website.jpg";
 import Titulo from "../Titulo";
+import Aos from "aos";
+import "aos/dist/aos.css"
+import { useEffect } from "react";
 // import softwareImg from "../../assets/images/software1600b.webp";
 
 const Servicos = ({ className }) => {
+  useEffect(()=>{
+    Aos.init({
+      duration: 1000,
+      easing: "ease-in-out"
+    })
+  },[])
   const services = [
     {
       id: 1,
@@ -50,18 +59,23 @@ const Servicos = ({ className }) => {
             src={service.img}
             alt=""
             style={{ width: "100%", height: "80%" }}
-            className=""
+            className="" 
+        data-aos="fade-up"
           />
-          <figcaption className="text-1xl text-black font-mono py-3 pl-2">
+          <figcaption className="text-1xl text-black font-mono py-3 pl-2" 
+        data-aos="fade-up">
             {service.title}
           </figcaption>
         </figure>
 
-        <p className="descricao text-gray-500 pl-2">{service.description}</p>
-        <a href="#" className="text-blue-500 p-2">
+        <p className="descricao text-gray-500 pl-2" 
+        data-aos="fade-up">{service.description}</p>
+        <a href="#" className="text-blue-500 p-2" 
+        data-aos="fade-up">
           ler mais
         </a>
-        <button className="border-blue-700 border text-blue-700 py-1 p-3 w-30 rounded m-2 cursor-pointer">
+        <button className="border-blue-700 border text-blue-700 py-1 p-3 w-30 rounded m-2 cursor-pointer" 
+        data-aos="fade-up">
           Solicitar
         </button>
       </div>
@@ -69,8 +83,9 @@ const Servicos = ({ className }) => {
   }
   return (
     <div className={className ? className + " " : ""}>
-      <p className="text-red-500 font-bold border-y-blue-300 border-y-1 p-3">Confire abaixo</p>
-      <h2 className="text-blue-500 text-3xl md:text-7xl font-bold mb-5"><span className="text-black">Nossos</span> Serviços</h2>
+      <p className="text-red-500 font-bold border-y-blue-300 border-y-1 p-3" data-aos="slide-down">Confire abaixo</p>
+      <h2 className="text-blue-500 text-3xl md:text-7xl font-bold mb-5" 
+        data-aos="zoom-out"><span className="text-black">Nossos</span> Serviços</h2>
       <div className="flex gap-4 flex-wrap md:w-[80%] md:justify-between">
         {services.map((service) => (
           <Service key={service.id} service={service} className={`hover:shadow-2xl`} />
