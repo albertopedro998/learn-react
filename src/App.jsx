@@ -10,7 +10,8 @@ import Sobre from "./components/Sobre";
 import "./App.css";
 import Servicos from "./components/Servicos/Servicos.jsx";
 import Diferenciais from "./components/Diferenciais";
-import Comunidade from "./components/Comunidade/index.jsx";
+import Comunidade from "./components/Comunidade";
+import Footer from "./components/Footer";
 
 function App() {
   let [tasks, setTasks] = useState([
@@ -41,6 +42,7 @@ function App() {
       <Sobre />
       <Diferenciais />
       <Comunidade />
+      <Footer />
     </>
   );
 }

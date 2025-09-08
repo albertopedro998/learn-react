@@ -1,7 +1,6 @@
 import Titulo from "../Titulo";
 import imgParc from "../../assets/images/service-thumbnail-3-270x300.jpg";
 import Slider from "react-slick";
-import Aos from "aos";
 
 export default function Comunidade() {
   const settings = {
