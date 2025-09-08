@@ -39,7 +39,7 @@ function Sobre({ className }) {
         <p className={bordaP}></p>
       </div>
 
-      <div id="secao-conteudo" className="flex justify-center items-center p-5 md:flex-nowrap flex-wrap">
+      <div id="secao-conteudo" className="flex justify-center items-center p-5 flex-wrap">
         <div className="flex-1 text-justify order-2 p-5 flex flex-col gap-5">
             <Titulo as="h3" className={`text-blue-500  `} data-aos="zoom-out">
                 <FontAwesomeIcon icon={faHistory} className="mr-5 animate-spin"/>
