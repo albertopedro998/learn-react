@@ -83,7 +83,7 @@ const Servicos = ({ className }) => {
   }
   return (
     <div className={className ? className + " " : ""}>
-      <p className="text-red-500 font-bold border-y-blue-300 border-y-1 p-3" data-aos="slide-down">Confire abaixo</p>
+      <p className="text-blue-500 font-bold border-y-blue-300 border-y-1 p-3 animate-bounce" data-aos="slide-down">Confire abaixo</p>
       <h2 className="text-blue-500 text-3xl md:text-7xl font-bold mb-5" 
         data-aos="zoom-out"><span className="text-black">Nossos</span> Serviços</h2>
       <div className="flex gap-4 flex-wrap md:w-[80%] md:justify-between">

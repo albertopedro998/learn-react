@@ -8,10 +8,10 @@ nav ul {
 nav ul li a {
   padding: 10px;
 }
-.btnLog:hover {
+/* .btnLog:hover {
     background-color: red;
     color: white;
-}
+} */
 .btnLog {
     transition: .5s;
     text-align: center;

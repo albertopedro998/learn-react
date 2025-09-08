@@ -70,7 +70,7 @@ function Navbar() {
             </li>
           ))}
           <li>
-            <a href="#" className="text-white bg-red-600 px-5 btnLog">
+            <a href="#" className="text-white bg-blue-500 px-5 btnLog">
               Entrar
             </a>
           </li>

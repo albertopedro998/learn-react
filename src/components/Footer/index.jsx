@@ -15,7 +15,7 @@ export default function Footer() {
       className=" w-full md:h-min-100 bg-gray-900 text-gray-500 p-5 flex justify-center flex-col items-center gap-10 "
     >
       <div className="md:container md:my-auto flex justify-center gap-5 flex-wrap p-5">
-        <section className="flex flex-col gap-2 md:w-100 ">
+        <section className="flex flex-col gap-2 md:w-100 order-1 ">
           <Titulo as="h3" className="text-white border-b-1 p-2 ">
             Sobre nós
           </Titulo>
@@ -26,7 +26,7 @@ export default function Footer() {
             necessitatibus?
           </p>
         </section>
-        <section className="flex flex-col gap-2">
+        <section className="flex flex-col gap-2 flex-1 order-2 ">
           <Titulo as="h3" className="text-white border-b-1 p-2 ">
             Serviços
           </Titulo>
@@ -58,7 +58,7 @@ export default function Footer() {
             </li>
           </ul>
         </section>
-        <section className="flex flex-col gap-2 ">
+        <section className="flex flex-col gap-2 flex-1 order-3">
           <Titulo as="h3" className="text-white border-b-1 p-2 ">
             Parcerias
           </Titulo>
@@ -80,7 +80,7 @@ export default function Footer() {
             </li>
           </ul>
         </section>
-        <section className="flex flex-col bg-blue-100 justify-center items-center gap-5 rounded p-5 md:w-100 w-full bg-linear-to-r from-blue-300 to-blue-900 ">
+        <section className="flex flex-col bg-blue-100 justify-center items-center gap-5 rounded p-5 md:w-100 w-full bg-linear-to-r from-blue-300 to-blue-900 order-4 md:order-2 lg:order-4 ">
           <Titulo as="h3" className="text-gray-100 ">
             Newsletter
           </Titulo>

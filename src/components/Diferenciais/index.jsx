@@ -63,7 +63,10 @@ export default function Diferenciais() {
         Principais Diferenciais
       </Titulo>
 
-      <p className="text-justify my-3 max-w-[700px] text-gray-500 " data-aos="slide-up">
+      <p
+        className="text-justify my-3 max-w-[700px] text-gray-500 "
+        data-aos="slide-up"
+      >
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim corporis
         repellat, dolorem architecto, consectetur maxime tenetur ea neque, saepe
         inventore fuga!
@@ -84,14 +87,14 @@ export default function Diferenciais() {
       </div>
       {/* PONTOS FORTES */}
       <div className="fortes container">
-        <div className="flex flex-wrap items-center justify-center md:justify-between gap-5 text-gray-500 ">
+        <div className="flex flex-wrap items-center justify-center lg:container lg:flex-nowrap text-gray-500 lg:text-sm ">
           {pontosFortes.map((ponto, index) => (
             <div key={`p-${index}`} className="w-max-100" data-aos="slide-up">
               <p className="flex gap-5 items-center">
                 {ponto.icon()}
                 {ponto.title}
               </p>
-              <p className="w-50 md:w-70 lg:w-100 ml-14 text-xs md:text-lg">
+              <p className="w-50 md:w-70 lg:w-100 ml-14 text-xs md:text-lg lg:text-sm">
                 {ponto.text}
               </p>
             </div>
