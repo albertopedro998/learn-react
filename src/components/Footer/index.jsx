@@ -15,18 +15,15 @@ export default function Footer() {
       className=" w-full md:h-min-100 bg-gray-900 text-gray-500 p-5 flex justify-center flex-col items-center gap-10 "
     >
       <div className="md:container md:my-auto flex justify-center gap-5 flex-wrap p-5">
-        <section className="flex flex-col gap-2 md:w-100 order-1 ">
+        <section className="flex flex-col gap-2 md:w-100 order-1 " data-aos="zoom-in">
           <Titulo as="h3" className="text-white border-b-1 p-2 ">
             Sobre nós
           </Titulo>
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Unde
-            itaque qui et, minus, voluptas quidem ut vitae fugiat, quaerat quis
-            non expedita dicta explicabo vel minima amet officiis temporibus
-            necessitatibus?
+          <p className="">
+            Ser reconhecida como uma das líderes globais em tecnologia aplicada à transformação digital, promovendo sustentabilidade, inclusão digital e crescimento inteligente até 2030.
           </p>
         </section>
-        <section className="flex flex-col gap-2 flex-1 order-2 ">
+        <section className="flex flex-col gap-2 flex-1 order-2 " data-aos="zoom-in">
           <Titulo as="h3" className="text-white border-b-1 p-2 ">
             Serviços
           </Titulo>
@@ -58,7 +55,7 @@ export default function Footer() {
             </li>
           </ul>
         </section>
-        <section className="flex flex-col gap-2 flex-1 order-3">
+        <section className="flex flex-col gap-2 flex-1 order-3" data-aos="zoom-in">
           <Titulo as="h3" className="text-white border-b-1 p-2 ">
             Parcerias
           </Titulo>
@@ -80,7 +77,7 @@ export default function Footer() {
             </li>
           </ul>
         </section>
-        <section className="flex flex-col bg-blue-100 justify-center items-center gap-5 rounded p-5 md:w-100 w-full bg-linear-to-r from-blue-300 to-blue-900 order-4 md:order-2 lg:order-4 ">
+        <section className="flex flex-col bg-blue-100 justify-center items-center gap-5 rounded p-5 md:w-100 w-full bg-linear-to-r from-blue-300 to-blue-900 order-4 md:order-2 lg:order-4 " data-aos="zoom-in">
           <Titulo as="h3" className="text-gray-100 ">
             Newsletter
           </Titulo>
@@ -126,10 +123,9 @@ export default function Footer() {
       </div>
       <div>
         <p>
-            &copy; 2025. Kima soluções Tecnológicas. todos os direitos reservados
+          &copy; 2025. Kima soluções Tecnológicas. todos os direitos reservados
         </p>
       </div>
-      
     </div>
   );
 }

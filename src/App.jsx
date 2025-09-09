@@ -31,11 +31,9 @@ function App() {
   return (
     <>
       <Navbar />
-      <Card
-        className="p-5 py-[50%] md:py-[45%] lg:py-[15%] flex flex-col justify-center box-border "
+      <Card className="p-5 py-[50%] md:py-[45%] lg:py-[15%] flex flex-col justify-center box-border "
       />
-      <Servicos
-        className="p-5 flex flex-col justify-center items-center
+      <Servicos className="p-5 flex flex-col justify-center items-center
       "
       />
       <Sobre />
