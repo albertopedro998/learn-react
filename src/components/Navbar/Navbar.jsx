@@ -32,6 +32,7 @@ function Navbar() {
       url: "domain",
     },
   ];
+  const app = useNavigate()
   return (
     <>
       <header>
@@ -70,7 +71,7 @@ function Navbar() {
             </li>
           ))}
           <li>
-            <a href="#" className="text-white bg-blue-500 px-5 btnLog">
+            <a href="#" className="text-white bg-blue-500 px-5 btnLog" onClick={()=> (app.navigate("/software"))}>
               Entrar
             </a>
           </li>

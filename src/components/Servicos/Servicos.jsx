@@ -5,6 +5,7 @@ import Titulo from "../Titulo";
 import Aos from "aos";
 import "aos/dist/aos.css"
 import { useEffect } from "react";
+import { FaEarthAfrica } from "react-icons/fa6";
 // import softwareImg from "../../assets/images/software1600b.webp";
 
 const Servicos = ({ className }) => {
@@ -65,6 +66,7 @@ const Servicos = ({ className }) => {
           <figcaption className="text-1xl text-black font-mono py-3 pl-2" 
         data-aos="fade-up">
             {service.title}
+            <FaEarthAfrica />
           </figcaption>
         </figure>
 

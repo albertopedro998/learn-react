@@ -14,8 +14,8 @@ export default function Footer() {
       id="rodape"
       className=" w-full md:h-min-100 bg-gray-900 text-gray-500 p-5 flex justify-center flex-col items-center gap-10 "
     >
-      <div className="md:container md:my-auto flex justify-center gap-5 flex-wrap p-5">
-        <section className="flex flex-col gap-2 md:w-100 order-1 " data-aos="zoom-in">
+      <div className="md:container md:my-auto flex justify-center gap-5 flex-wrap p-5 md:justify-between">
+        <section className="flex flex-col gap-2 md:w-150 order-1 " data-aos="zoom-in">
           <Titulo as="h3" className="text-white border-b-1 p-2 ">
             Sobre nós
           </Titulo>
@@ -51,28 +51,6 @@ export default function Footer() {
             <li>
               <a href="#" className="text-gray-400">
                 Domínios
-              </a>
-            </li>
-          </ul>
-        </section>
-        <section className="flex flex-col gap-2 flex-1 order-3" data-aos="zoom-in">
-          <Titulo as="h3" className="text-white border-b-1 p-2 ">
-            Parcerias
-          </Titulo>
-          <ul className="flex flex-col gap-3">
-            <li>
-              <a href="#" className="text-gray-400">
-                AngoWeb
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-400">
-                Google
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-gray-400">
-                Amazon
               </a>
             </li>
           </ul>

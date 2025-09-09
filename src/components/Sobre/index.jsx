@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Titulo from "../Titulo";
-import destaqueSobre from "../../assets/images/Christopher A Guerreiro150x150png.png";
+// import destaqueSobre from "../../assets/images/Macbook-Air-localhost.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHistory,
@@ -113,12 +113,12 @@ function Sobre({ className }) {
               </div>
             </div>
           </div>
-          <img
+          {/* <img
             src={destaqueSobre}
             alt=""
             className="flex-1 w-100 h-100 order-1 hover:scale-99 duration-100 transition-[1s] border border-gray-300 rounded-md "
             data-aos="zoom-in"
-          />
+          /> */}
         </div>
       </div>
     </div>

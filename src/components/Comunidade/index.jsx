@@ -1,9 +1,10 @@
 import Titulo from "../Titulo";
-import alibabaLogo from "../../assets/images/img-community/im-457227.avif";
-import amazonLogo from "../../assets/images/img-community/Amazon-Logo-2000.png";
-import googleLogo from "../../assets/images/img-community/google-logo-png-google-sva-scholarship-20.png";
-import FacebookLogo from "../../assets/images/img-community/Facebook_Logo_(2019).svg.png";
-import linkedinLogo from "../../assets/images/img-community/a9fc2a2b-4472-4151-8efa-3c7a306097bf_3400x2125.png";
+import logo from "../../assets/images/img-community/logo.jpeg";
+import logo1 from "../../assets/images/img-community/logo1.PNG";
+import logo2 from "../../assets/images/img-community/logo2.jpeg";
+import logo3 from "../../assets/images/img-community/logo3.jpeg";
+import logo4 from "../../assets/images/img-community/logo4.jpeg";
+import logo5 from "../../assets/images/img-community/logo5.jpeg";
 import Slider from "react-slick";
 
 export default function Comunidade() {
@@ -22,23 +23,27 @@ export default function Comunidade() {
   };
   const comunidaLogo = [
     {
-      img: googleLogo,
+      img: logo,
       legenda: "",
     },
     {
-      img: FacebookLogo,
+      img: logo1,
       legenda: "",
     },
     {
-      img: linkedinLogo,
+      img: logo2,
       legenda: "",
     },
     {
-      img: amazonLogo,
+      img: logo3,
       legenda: "",
     },
     {
-      img: alibabaLogo,
+      img: logo4,
+      legenda: "",
+    },
+    {
+      img: logo5,
       legenda: "",
     },
   ];
@@ -51,9 +56,7 @@ export default function Comunidade() {
         className="text-center md:w-[900px] md:mx-auto p-5 text-gray-500 "
         data-aos="slide-up"
       >
-        A empresa Kima Soluções Tecnológicas, cresce a cada dia que passa,
-        trabalhamos dia e noite para trazer a si o melhor da tecnologia. Conheça
-        os nossos parceiros, convidamos você a se juntar a nossa comunidade.
+        Mais de 1 000 negócios confiam em nós.
       </p>
 
       <div>
