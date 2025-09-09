@@ -19,28 +19,36 @@ const Servicos = ({ className }) => {
     {
       id: 1,
       img: softwareImg,
-      title: "Software",
+      title: "Criaão de Software",
+      ben: "Comunicaçao personalizada para o seu negócio",
+      price: `Kz 200.000`,
       description: `Utilizar um software personalizado permite automatizar tarefas,
-          reduzir custos...`,
+          reduzir custos.`,
     },
     {
       id: 2,
       img: dominioImg,
-      title: "Domínios",
-      description: `Utilizar um software personalizado permite automatizar tarefas,
-          reduzir custos,...`,
+      title: "Criação de Domínios",
+      price: `Kz 9.000`,
+      ben: "Comunicaçao personalizada para o seu negócio",
+      description: `Registrar um domínio próprio fortalece a identidade da sua marca, transmite credibilidade e facilita o acesso dos clientes ao seu negócio online.
+      `,
     },
     {
       id: 4,
       img: webSiteImg,
       title: "E-mail corporativo",
+      ben: "Comunicaçao personalizada para o seu negócio",
+      price: `Kz 100.000`,
       description: `Utilizar um software personalizado permite automatizar tarefas,
           reduzir custos...`,
     },
     {
       id: 3,
       img: webSiteImg,
-      title: "Website",
+      title: "Criação de Website",
+      ben: "Comunicaçao personalizada para o seu negócio",
+      price: `Kz 150.000`,
       description: `Utilizar um software personalizado permite automatizar tarefas,
           reduzir custos, aumentar...`,
     }
@@ -51,11 +59,11 @@ const Servicos = ({ className }) => {
         className={
           className
             ? className +
-              " flex-col sm:flex-auto md:flex-none flex overflow-hidden md:w-[45%] lg:w-[20%]"
+              " flex-col sm:flex-auto flex overflow-hidden md:w-[45%] lg:w-[20%] flex-col gap-2 h-140 justify-between p-5 shadow-md border border-gray-200 rounded "
             : " flex flex-col overflow-hidden"
         }
       >
-        <figure className="w-full h-70">
+        <figure className="w-full h-20 flex flex-col">
           <img
             src={service.img}
             alt=""
@@ -63,22 +71,36 @@ const Servicos = ({ className }) => {
             className="" 
         data-aos="fade-up"
           />
-          <figcaption className="text-1xl text-black font-mono py-3 pl-2" 
+          <figcaption className="text-xl text-gray-700 font-mono py-3 pl-2 font-extrabold " 
         data-aos="fade-up">
             {service.title}
-            <FaEarthAfrica />
+            {/* <FaEarthAfrica /> */}
           </figcaption>
         </figure>
 
-        <p className="descricao text-gray-500 pl-2" 
+        <p className="descricao text-gray-500 pl-2 mt-3 " 
+        data-aos="fade-up">{service.ben}</p>
+
+        <p className="descricao text-gray-500 pl-2 text-justify " 
         data-aos="fade-up">{service.description}</p>
-        <a href="#" className="text-blue-500 p-2" 
+        <div className="flex flex-col">
+          
+          <small className="p-2 text-gray-400"
+          data-aos="fade-up">
+            apartir de
+          </small>
+          <a href="#" className="text-2xl text-red-600 font-extrabold p-2"
+          data-aos="fade-up">
+            {service.price}
+          </a>
+          <small className="p-2 text-gray-400"
+          data-aos="fade-up">
+            Mensal
+          </small>
+        </div>
+        <button className="bg-blue-500 border text-white p-3 w-30 rounded cursor-pointer w-full box-border" 
         data-aos="fade-up">
-          ler mais
-        </a>
-        <button className="border-blue-700 border text-blue-700 py-1 p-3 w-30 rounded m-2 cursor-pointer" 
-        data-aos="fade-up">
-          Solicitar
+          ver planos
         </button>
       </div>
     );

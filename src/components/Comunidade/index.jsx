@@ -48,16 +48,10 @@ export default function Comunidade() {
     },
   ];
   return (
-    <div className="p-5 mt-5">
-      <Titulo as="h2" className="text-center " data-aos="slide-up">
-        Comunidade Extensiva
-      </Titulo>
-      <p
-        className="text-center md:w-[900px] md:mx-auto p-5 text-gray-500 "
-        data-aos="slide-up"
-      >
+    <div className="p-5 m-10">
+      <Titulo as="h3" className="text-center " data-aos="slide-up">
         Mais de 1 000 negócios confiam em nós.
-      </p>
+      </Titulo>
 
       <div>
         <div className="md:w-[700px] md:mx-auto">
@@ -66,7 +60,10 @@ export default function Comunidade() {
             className="parceiros container flex gap-5 justify-center m-auto items-center"
           >
             {comunidaLogo.map((item, index) => (
-              <div className="m-2 px-2 w-[200px]" key={`logo-comunidade${index}`}>
+              <div
+                className="m-2 px-2 w-[200px]"
+                key={`logo-comunidade${index}`}
+              >
                 <figure
                   className="flex flex-col gap-2 h-[150px] w-[100%] overflow-hidden "
                   data-aos="slide-up"
@@ -76,7 +73,9 @@ export default function Comunidade() {
                     className="h-42 w-[100%] rounded-md "
                     alt="Imagem"
                   />
-                  {item.legenda && <figcaption className="">{item.legenda}</figcaption>}
+                  {item.legenda && (
+                    <figcaption className="">{item.legenda}</figcaption>
+                  )}
                 </figure>
               </div>
             ))}
