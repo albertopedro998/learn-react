@@ -121,7 +121,7 @@ function Sobre({ className }) {
           /> */}
         </div>
       </div>
-    </div>
+    </div> 
   );
 }
 
