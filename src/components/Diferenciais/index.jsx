@@ -7,7 +7,6 @@ import {
   FaRegMessage,
   FaRegStar,
 } from "react-icons/fa6";
-import Aos from "aos";
 export default function Diferenciais() {
   const caracter = [
     {
@@ -33,21 +32,21 @@ export default function Diferenciais() {
   const pontosFortes = [
     {
       title: "Profisiionais qualificados",
-      text: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi sapiente reiciendis consequuntur omnis obcaecati voluptas, quidem iusto harum.",
+      text: "A excelência não está apenas na tecnologia, mas também nas pessoas que a constroem. A equipe é formada por profissionais altamente qualificados, com experiência em desenvolvimento de software, cibersegurança, ciência de dados e gestão de projetos.",
       icon: () => {
         return <FaRegUser className="text-4xl" />;
       },
     },
     {
       title: "Atendimento rápido",
-      text: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi sapiente reiciendis consequuntur omnis obcaecati voluptas, quidem iusto harum.",
+      text: `O atendimento rápido é outro diferencial da empresa. A Kima adota metodologias ágeis e canais de suporte 24/7, garantindo que qualquer solicitação seja tratada com eficiência, reduzindo tempo de espera e aumentando a satisfação dos clientes.`,
       icon: () => {
         return <FaRegMessage className="text-4xl" />;
       },
     },
     {
       title: "Segurança elevada",
-      text: " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi sapiente reiciendis consequuntur omnis obcaecati voluptas, quidem iusto harum.",
+      text: "Todos os sistemas desenvolvidos passam por rigorosos testes de qualidade e seguem padrões internacionais de proteção de dados. A Kima investe constantemente em criptografia, monitoramento em tempo real e práticas de compliance digital, assegurando que os clientes tenham total confiança em suas soluções.",
       icon: () => {
         return <FaRegStar className="text-4xl" />;
       },
@@ -64,12 +63,10 @@ export default function Diferenciais() {
       </Titulo>
 
       <p
-        className="text-justify my-3 max-w-[700px] text-gray-500 "
+        className="text-justify md:text-center my-3 max-w-[700px] mx-auto text-gray-500 "
         data-aos="slide-up"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim corporis
-        repellat, dolorem architecto, consectetur maxime tenetur ea neque, saepe
-        inventore fuga!
+        A Kima combina talento humano, velocidade e segurança para entregar muito mais do que tecnologia: entrega tranquilidade e valor real para empresas e pessoas
       </p>
 
       {/* CARACTERISTICAS */}

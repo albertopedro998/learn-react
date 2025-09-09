@@ -31,12 +31,11 @@ function App() {
   return (
     <>
       <Navbar />
-      <Card className="p-5
-          md:p-52 md:gap-6
-          sm:gap-3 sm:p-5 flex flex-col justify-center md:items-start sm:items-center
-      "
+      <Card
+        className="p-5 py-[50%] md:py-[45%] lg:py-[15%] flex flex-col justify-center box-border "
       />
-      <Servicos className="p-5 flex flex-col justify-center items-center
+      <Servicos
+        className="p-5 flex flex-col justify-center items-center
       "
       />
       <Sobre />
