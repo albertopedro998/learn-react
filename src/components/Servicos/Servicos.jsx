@@ -1,12 +1,10 @@
-import softwareImg from "../../assets/images/software1600b.webp";
-import dominioImg from "../../assets/images/dominio-.com_.webp";
-import webSiteImg from "../../assets/images/website.jpg";
-import Titulo from "../Titulo";
+import softwareImg from "../../assets/images/icon/10382399.png";
+import dominioImg from "../../assets/images/icon/images.png";
+import webSiteImg from "../../assets/images/icon/images (1).png";
+import emailSiteImg from "../../assets/images/icon/images.jpg";
 import Aos from "aos";
 import "aos/dist/aos.css"
 import { useEffect } from "react";
-import { FaEarthAfrica } from "react-icons/fa6";
-// import softwareImg from "../../assets/images/software1600b.webp";
 
 const Servicos = ({ className }) => {
   useEffect(()=>{
@@ -19,7 +17,7 @@ const Servicos = ({ className }) => {
     {
       id: 1,
       img: softwareImg,
-      title: "Criaão de Software",
+      title: "Criação de Software",
       ben: "Comunicaçao personalizada para o seu negócio",
       price: `Kz 200.000`,
       description: `Utilizar um software personalizado permite automatizar tarefas,
@@ -36,7 +34,7 @@ const Servicos = ({ className }) => {
     },
     {
       id: 4,
-      img: webSiteImg,
+      img: emailSiteImg,
       title: "E-mail corporativo",
       ben: "Comunicaçao personalizada para o seu negócio",
       price: `Kz 100.000`,
@@ -59,22 +57,20 @@ const Servicos = ({ className }) => {
         className={
           className
             ? className +
-              " flex-col sm:flex-auto flex overflow-hidden md:w-[45%] lg:w-[20%] flex-col gap-2 h-140 justify-between p-5 shadow-md border border-gray-200 rounded "
+              " sm:flex-auto flex overflow-hidden md:w-[45%] lg:w-[20%] flex-col gap-2 h-125 justify-between p-5 shadow-md border border-gray-200 rounded "
             : " flex flex-col overflow-hidden"
         }
       >
-        <figure className="w-full h-20 flex flex-col">
+        <figure className="w-full h-15 flex items-center">
           <img
             src={service.img}
             alt=""
-            style={{ width: "100%", height: "80%" }}
-            className="" 
+            className="w-[100px] h-[100px] md:w-[50px] md:h-[50px]" 
         data-aos="fade-up"
           />
-          <figcaption className="text-xl text-gray-700 font-mono py-3 pl-2 font-extrabold " 
+          <figcaption className="text-xl md:text-sm text-gray-700 font-mono py-3 pl-2 font-extrabold " 
         data-aos="fade-up">
             {service.title}
-            {/* <FaEarthAfrica /> */}
           </figcaption>
         </figure>
 
@@ -89,7 +85,7 @@ const Servicos = ({ className }) => {
           data-aos="fade-up">
             apartir de
           </small>
-          <a href="#" className="text-2xl text-red-600 font-extrabold p-2"
+          <a href="#" className="text-2xl text-red-600 font-extrabold p-2 md:text-3xl"
           data-aos="fade-up">
             {service.price}
           </a>
@@ -110,7 +106,7 @@ const Servicos = ({ className }) => {
       <p className="text-blue-500 font-bold border-y-blue-300 border-y-1 p-3 animate-bounce" data-aos="slide-down">Confire abaixo</p>
       <h2 className="text-blue-500 text-3xl md:text-7xl font-bold mb-5" 
         data-aos="zoom-out"><span className="text-black">Nossos</span> Serviços</h2>
-      <div className="flex gap-4 flex-wrap md:w-[80%] md:justify-between">
+      <div className="flex gap-4 flex-wrap md:container md:mx-auto md:justify-between">
         {services.map((service) => (
           <Service key={service.id} service={service} className={`hover:shadow-2xl`} />
         ))}

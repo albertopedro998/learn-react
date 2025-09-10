@@ -15,7 +15,7 @@ export default function Footer() {
       className=" w-full md:h-min-100 bg-gray-900 text-gray-500 p-5 flex justify-center flex-col items-center gap-10 "
     >
       <div className="md:container md:my-auto flex justify-center gap-5 flex-wrap p-5 md:justify-between">
-        <section className="flex flex-col gap-2 md:w-150 order-1 " data-aos="zoom-in">
+        <section className="flex flex-col gap-2 md:w-140 order-1 " data-aos="zoom-in">
           <Titulo as="h3" className="text-white border-b-1 p-2 ">
             Sobre nós
           </Titulo>

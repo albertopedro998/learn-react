@@ -55,9 +55,6 @@ function Sobre({ className }) {
             <Titulo as="h3" className={`text-blue-500  `} data-aos="zoom-out">
               <FontAwesomeIcon icon={faHistory} className="mr-5 " />
               História
-              <small className="text-gray-600 block text-xs md:text-xl">
-                Mais de 20 anos no mercado, trazendo o melhor para si.
-              </small>
             </Titulo>
             <p className="" data-aos="fade-down">
               A Kima é uma empresa de tecnologia fundada com o propósito de

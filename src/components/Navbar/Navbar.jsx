@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logotipo.jpeg";
 import "./Navbar.css";
 import { useState } from "react";
@@ -44,12 +45,12 @@ function Navbar() {
         >
           Menu
         </button>
-        <a href="/">
+        <Link to="/">
           <h1>
             Logo
             <img src={Logo} alt="" />
           </h1>
-        </a>
+        </Link>
         <ul className={menu}>
           <button
             style={{zIndex: `3`}}
@@ -62,18 +63,14 @@ function Navbar() {
           </button>
           {links.map((link) => (
             <li key={link.id}>
-              <a
-                href={link.url}
-                className={`text-cyan-800 ${link.id == 1 && "active"}`}
-              >
-                {link.nome}
-              </a>
+              <Link to={link.url} 
+                className={`text-cyan-800 ${link.id == 1 && "active"}`}>{link.nome}</Link>
             </li>
           ))}
           <li>
-            <a href="#" className="text-white bg-blue-500 px-5 btnLog" onClick={()=> (app.navigate("/software"))}>
+            <Link className="text-white bg-blue-500 px-5 btnLog" to="#">
               Entrar
-            </a>
+            </Link>
           </li>
         </ul>
       </header>
