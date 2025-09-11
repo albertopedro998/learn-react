@@ -64,7 +64,7 @@ function Navbar() {
           {links.map((link) => (
             <li key={link.id}>
               <Link to={link.url} 
-                className={`text-cyan-800 ${link.id == 1 && "active"}`}>{link.nome}</Link>
+                className={`text-cyan-800 hover:border-b hover:border-cyan-800 duration-100`}>{link.nome}</Link>
             </li>
           ))}
           <li>

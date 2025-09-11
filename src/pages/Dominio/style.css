@@ -1,0 +1,9 @@
+@tailwindcss;
+
+.destaque {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.589)), url("../../assets/images/OIP.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

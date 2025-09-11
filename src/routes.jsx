@@ -1,21 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Software from "./pages/Software";
 import Home from "./Home";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer";
-import Container from "./components/Container";
+import Layout from "./pages/Layout";
+import Dominio from "./pages/Dominio";
 
 function Router() {
   return (
     <BrowserRouter>
-    <Navbar />
-    <Container>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/Software" element={<Software />}></Route>
+        <Route path="/" element={ <Layout />}>
+            <Route index element={<Home />}></Route>
+            <Route path="/Software" element={<Software />}></Route>
+            <Route path="/domain" element={<Dominio />}></Route>
+        </Route>
       </Routes>
-    </Container>
-    <Footer />
     </BrowserRouter>
   );
 }
