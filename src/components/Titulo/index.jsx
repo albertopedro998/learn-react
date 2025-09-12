@@ -4,11 +4,11 @@ function Titulo({ as = "h1", className, children, ...props }) {
   const styles = [
     {
       tag: "h1",
-      className: "text-blue-500 text-5xl md:text-9xl font-bold",
+      className: "text-blue-500 text-5xl md:text-7xl font-bold",
     },
     {
       tag: "h2",
-      className: "text-blue-500 text-3xl md:text-7xl font-bold",
+      className: "text-blue-500 text-3xl md:text-5xl font-bold",
     },
     {
       tag: "h3",

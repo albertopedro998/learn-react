@@ -1,8 +1,15 @@
 import Table from "../../components/Table";
+import Text from "../../components/Text";
 import Titulo from "../../components/Titulo";
+import Card from "./Card";
 import "./style.css";
 import Slider from "react-slick";
+import { useRef, useState } from "react";
 function Dominio() {
+  const btnShowMore = useRef();
+  const [showListDomain, setShowListDomain] = useState(
+    "container flex flex-wrap justify-center max-h-[450px] overflow-hidden "
+  );
   const settings = {
     dots: false,
     infinite: true,
@@ -73,8 +80,84 @@ function Dominio() {
       category: "Popular",
     },
   ];
+  function showListDomainHandler() {
+    btnShowMore.current.innerHTML = btnShowMore.current.innerHTML.includes(
+      "mostrar mais"
+    )
+      ? "mostrar menos"
+      : "mostrar mais";
+
+    setShowListDomain((value) =>
+      value.includes("max-h-[450px")
+        ? value.replace("max-h-[450px]", "")
+        : value + " max-h-[450px]"
+    );
+  }
+  function number_format(price) {
+    let vlformat = "";
+    let vl = new String(price);
+    switch (vl.length) {
+      case 5:
+        vlformat = `${vl.slice(0, 2) + "." + vl.slice(2, vl.length)},00`;
+        break;
+      case 6:
+        vlformat = `${vl.slice(0, 3) + "." + vl.slice(3, vl.length)},00`;
+        break;
+      case 7:
+        vlformat = `${
+          vl.slice(0, 1) + "." + vl.slice(1, 4) + "." + vl.slice(4, vl.length)
+        },00`;
+        break;
+
+      default:
+        break;
+    }
+    return vlformat;
+  }
   return (
     <>
+      {/* Lista dos Domínios disponíveis */}
+      <div className="container mx-auto m-[10em]  md:my-[5em]">
+        <Text
+          as="h2"
+          className={`text-xl md:text-2xl font-bold text-center p-5 mb-20 md:mb-10`}
+        >
+          Escolha o <span className="text-blue-600 text-3xl">domínio</span> que
+          pretendes e adquira na hora.
+        </Text>
+        <div className={showListDomain} style={{ transition: "1s" }}>
+          {dominiosLista.map((item) => (
+            <Card
+              key={"-" + item.id}
+              className="card-dominio hover:shadow-2xl md:w-100 flex flex-col p-5 bg-white text-black justify-center items-center gap-5 rounded-md m-3 md:h-50 relative bg-linear-to-r from-blue-400 to-blue-900"
+              data-aos="slide-up"
+            >
+              <p className="text-2xl font-bold md:text-4xl text-white ">
+                <span className="text-3xl">.</span>
+                {item.name}
+              </p>
+              <small className="text-orange-500 font-bold text-shadow-2xs text-shadow-white text-xl md:text-3xl ">
+                Kz {number_format(item.price)}
+              </small>
+              <p className=" text-xs text-white font-bold absolute bottom-0 left-2">
+                {item.category}
+              </p>
+              <button className="text-blue-800 px-5 py-2 rounded hover:cursor-pointer bg-white">
+                Registar
+              </button>
+            </Card>
+          ))}
+        </div>
+        <button
+          className="text-blue-400 text-center p-4 container m-auto"
+          onClick={showListDomainHandler}
+          ref={btnShowMore}
+        >
+          mostrar mais
+        </button>
+      </div>
+      {/* Fim da Lista dos Domínios disponíveis */}
+
       {/* Area destaque */}
       <div className="destaque ">
         <div className="text-white h-[90vh] flex flex-col justify-center container md:m-auto">
@@ -105,7 +188,10 @@ function Dominio() {
                 placeholder="meudominio.com"
                 required
               />
-              <button type="submit" className="bg-blue-500 text-white px-3 flex-1">
+              <button
+                type="submit"
+                className="bg-blue-500 text-white px-3 flex-1 min-w-[100px]"
+              >
                 Registrar
               </button>
             </form>
@@ -121,15 +207,15 @@ function Dominio() {
                   key={"dominioId-" + item.id}
                   data-aos="slide-up"
                 >
-                  <div className="card-dominio flex flex-col p-5 bg-white text-black justify-center items-center rounded-md m-3 md:h-50 relative">
-                    <p className="text-2xl font-bold md:text-4xl ">
-                      <span className="text-blue-400 text-3xl">.</span>
+                  <div className="card-dominio flex flex-col p-5 bg-white text-black justify-center items-center rounded-md m-3 md:h-50 relative bg-linear-to-r from-blue-400 to-blue-900">
+                    <p className="text-2xl font-bold md:text-4xl text-white ">
+                      <span className="text-3xl">.</span>
                       {item.name}
                     </p>
-                    <small className="text-gray-600 text-xl md:text-3xl ">
-                      kz {item.price}/ano
+                    <small className="text-orange-500 font-bold text-shadow-2xs text-shadow-white text-xl md:text-3xl ">
+                      kz {number_format(item.price)}/ano
                     </small>
-                    <p className=" text-2xl text-blue-600 font-bold absolute bottom-0 left-2 animate-bounce">
+                    <p className=" text-2xl text-white font-bold absolute bottom-0 left-2 animate-bounce">
                       {item.category}
                     </p>
                   </div>
@@ -229,83 +315,41 @@ function Dominio() {
           registros
         </div>
       </div>
-      <hr className="border-gray-300 mb-20"/>
+      <hr className="border-gray-300 mb-20" />
       {/* Fim da Tabela exibindo todos os dominios disponíveis */}
 
       {/* Beneficios em se obter um dominio */}
       <div className="container mx-auto p-5">
-        <Titulo as="h3" className={`text-center `}>
-          Obtenha muito mais do seu domínio
+        <Titulo as="h3" className={`text-center text-black `}>
+          O que trás para sí um <span className="text-orange-400">domínio</span>
+          ?
         </Titulo>
         <p className="text-center mt-5 mb-15 text-gray-500 mx-auto md:w-[700px]">
-          Ao registrar o seu domínio, você recebe recursos essenciais sem custo
-          adicional, garantindo mais valor e praticidade para o seu negócio
+          Um domínio próprio passa mais confiança do que usar endereços gratuitos
         </p>
         <div className="flex gap-10 flex-wrap container mx-auto justify-center items-baseline ">
           <div className="flex flex-col gap-3 md:w-[30%]">
-            <Titulo as="h3" className={`font-bold md:text-lg `}>
-              Painel de controle simples e intuitivo
+            <Titulo as="h3" className={`font-bold md:text-lg text-center `}>
+              Identidade e marca
             </Titulo>
-            <p className="text-gray-500 text-justify">
-              Mantenha total controle sobre os seus domínios! Evite
-              transferências não autorizadas e, quando necessário, desbloqueie o
-              domínio com segurança e facilidade, diretamente no seu painel de
-              gestão na área de clientes.
+            <p className="text-gray-500 text-center">
+              Facilita a divulgação e memorização do seu negócio ou projeto.
             </p>
           </div>
           <div className="flex flex-col gap-3 md:w-[30%]">
-            <Titulo as="h3" className={`font-bold md:text-lg `}>
-              Nunca perca o seu domínio - Renovação automática Ativada
+            <Titulo as="h3" className={`font-bold md:text-lg text-center `}>
+              Visibilidade e marketing
             </Titulo>
-            <p className="text-gray-500 text-justify">
-              Mantenha total controle sobre os seus domínios! Evite
-              transferências não autorizadas e, quando necessário, desbloqueie o
-              domínio com segurança e facilidade, diretamente no seu painel de
-              gestão na área de clientes.
+            <p className="text-gray-500 text-center">
+              Um domínio facilita estratégias de SEO (otimização para mecanismos de busca) e campanhas de marketing digital.
             </p>
           </div>
           <div className="flex flex-col gap-3 md:w-[30%]">
-            <Titulo as="h3" className={`font-bold md:text-lg `}>
-              Proteção contra trasferências não autorizadas
+            <Titulo as="h3" className={`font-bold md:text-lg text-center `}>
+              Controle e personalização
             </Titulo>
-            <p className="text-gray-500 text-justify">
-              Mantenha total controle sobre os seus domínios! Evite
-              transferências não autorizadas e, quando necessário, desbloqueie o
-              domínio com segurança e facilidade, diretamente no seu painel de
-              gestão na área de clientes.
-            </p>
-          </div>
-          <div className="flex flex-col gap-3 md:w-[30%]">
-            <Titulo as="h3" className={`font-bold md:text-lg `}>
-              Painel de controle simples e intuitivo
-            </Titulo>
-            <p className="text-gray-500 text-justify">
-              Mantenha total controle sobre os seus domínios! Evite
-              transferências não autorizadas e, quando necessário, desbloqueie o
-              domínio com segurança e facilidade, diretamente no seu painel de
-              gestão na área de clientes.
-            </p>
-          </div>
-          <div className="flex flex-col gap-3 md:w-[30%]">
-            <Titulo as="h3" className={`font-bold md:text-lg `}>
-              Nunca perca o seu domínio - Renovação automática Ativada
-            </Titulo>
-            <p className="text-gray-500 text-justify">
-              Mantenha total controle sobre os seus domínios! Evite
-              transferências não autorizadas e, quando necessário, desbloqueie o
-              domínio com segurança e facilidade, diretamente no seu painel de
-              gestão na área de clientes.
-            </p>
-          </div>
-          <div className="flex flex-col gap-3 md:w-[30%]">
-            <Titulo as="h3" className={`font-bold md:text-lg `}>
-              Proteção contra trasferências não autorizadas
-            </Titulo>
-            <p className="text-gray-500 text-justify">
-              Mantenha total controle sobre os seus domínios! Evite
-              transferências não autorizadas e, quando necessário, desbloqueie o
-              domínio com segurança e facilidade, diretamente no seu painel de
-              gestão na área de clientes.
+            <p className="text-gray-500 text-center">
+              Permite ter e-mails profissionais e total personalização do site.
             </p>
           </div>
         </div>
