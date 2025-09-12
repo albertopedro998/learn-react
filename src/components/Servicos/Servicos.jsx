@@ -17,9 +17,9 @@ const Servicos = ({ className }) => {
     {
       id: 1,
       img: softwareImg,
-      title: "Criação de Software",
+      title: "Desenvolvimento de Software a Medida",
       ben: "Comunicaçao personalizada para o seu negócio",
-      price: `Kz 200.000`,
+      price: `Kz `,
       description: `Utilizar um software personalizado permite automatizar tarefas,
           reduzir custos.`,
     },
@@ -27,7 +27,7 @@ const Servicos = ({ className }) => {
       id: 2,
       img: dominioImg,
       title: "Criação de Domínios",
-      price: `Kz 9.000`,
+      price: `Kz 20.000`,
       ben: "Comunicaçao personalizada para o seu negócio",
       description: `Registrar um domínio próprio fortalece a identidade da sua marca, transmite credibilidade e facilita o acesso dos clientes ao seu negócio online.
       `,
@@ -37,7 +37,7 @@ const Servicos = ({ className }) => {
       img: emailSiteImg,
       title: "E-mail corporativo",
       ben: "Comunicaçao personalizada para o seu negócio",
-      price: `Kz 100.000`,
+      price: `Kz 550`,
       description: `Utilizar um software personalizado permite automatizar tarefas,
           reduzir custos...`,
     },
@@ -46,7 +46,7 @@ const Servicos = ({ className }) => {
       img: webSiteImg,
       title: "Criação de Website",
       ben: "Comunicaçao personalizada para o seu negócio",
-      price: `Kz 150.000`,
+      price: `Kz 200.000`,
       description: `Utilizar um software personalizado permite automatizar tarefas,
           reduzir custos, aumentar...`,
     }
@@ -87,7 +87,7 @@ const Servicos = ({ className }) => {
           </small>
           <a href="#" className="text-2xl text-red-600 font-extrabold p-2 md:text-3xl"
           data-aos="fade-up">
-            {service.price}
+            {service.price},00
           </a>
           <small className="p-2 text-gray-400"
           data-aos="fade-up">

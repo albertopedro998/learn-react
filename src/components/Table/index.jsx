@@ -1,7 +1,7 @@
 export default function Table({ children, className }) {
   return (
     <table
-      className={`border border-gray-100  ${
+      className={`border-2 border-gray-100  ${
         className ? className : ""
       }`}
     >
