@@ -43,7 +43,7 @@ function Dominio() {
   return (
     <>
       {/* Lista dos Domínios disponíveis */}
-      <div className="container mx-auto  md:my-[5em]">
+      <div className="container mx-auto  md:my-[5em]" data-aos="fade-up">
         <Text
           as="h2"
           className={`text-xl md:text-2xl font-bold text-center p-5 mb-20 md:mb-10`}
