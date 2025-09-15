@@ -5,6 +5,8 @@ import Card from "./Card";
 import "./style.css";
 import Slider from "react-slick";
 import { useRef, useState } from "react";
+import { Link } from "react-router-dom";
+import { number_format, dominiosLista } from "./helpers";
 function Dominio() {
   const btnShowMore = useRef();
   const [showListDomain, setShowListDomain] = useState(
@@ -24,62 +26,6 @@ function Dominio() {
     ],
   };
 
-  const dominiosLista = [
-    {
-      id: 1,
-      name: "com",
-      price: 24_900,
-      category: "Popular",
-    },
-    {
-      id: 2,
-      name: "ao",
-      price: 24_900,
-      category: "Other",
-    },
-    {
-      id: 3,
-      name: "org.ao",
-      price: 24_900,
-      category: "Other",
-    },
-    {
-      id: 4,
-      name: "edu.ao",
-      price: 34_900,
-      category: "Other",
-    },
-    {
-      id: 5,
-      name: "it.ao",
-      price: 34_900,
-      category: "Other",
-    },
-    {
-      id: 6,
-      name: "co",
-      price: 34_900,
-      category: "Other",
-    },
-    {
-      id: 7,
-      name: "net",
-      price: 24_900,
-      category: "Popular",
-    },
-    {
-      id: 8,
-      name: "org",
-      price: 24_900,
-      category: "Popular",
-    },
-    {
-      id: 9,
-      name: "info",
-      price: 29_900,
-      category: "Popular",
-    },
-  ];
   function showListDomainHandler() {
     btnShowMore.current.innerHTML = btnShowMore.current.innerHTML.includes(
       "mostrar mais"
@@ -93,31 +39,11 @@ function Dominio() {
         : value + " max-h-[450px]"
     );
   }
-  function number_format(price) {
-    let vlformat = "";
-    let vl = new String(price);
-    switch (vl.length) {
-      case 5:
-        vlformat = `${vl.slice(0, 2) + "." + vl.slice(2, vl.length)},00`;
-        break;
-      case 6:
-        vlformat = `${vl.slice(0, 3) + "." + vl.slice(3, vl.length)},00`;
-        break;
-      case 7:
-        vlformat = `${
-          vl.slice(0, 1) + "." + vl.slice(1, 4) + "." + vl.slice(4, vl.length)
-        },00`;
-        break;
-
-      default:
-        break;
-    }
-    return vlformat;
-  }
+  
   return (
     <>
       {/* Lista dos Domínios disponíveis */}
-      <div className="container mx-auto m-[10em]  md:my-[5em]">
+      <div className="container mx-auto  md:my-[5em]">
         <Text
           as="h2"
           className={`text-xl md:text-2xl font-bold text-center p-5 mb-20 md:mb-10`}
@@ -142,9 +68,10 @@ function Dominio() {
               <p className=" text-xs text-white font-bold absolute bottom-0 left-2">
                 {item.category}
               </p>
-              <button className="text-blue-800 px-5 py-2 rounded hover:cursor-pointer bg-white">
+              <Link className="text-blue-800 px-5 py-2 rounded hover:cursor-pointer bg-white" 
+                to={"/domain/registar/"+item.id}>
                 Registar
-              </button>
+              </Link>
             </Card>
           ))}
         </div>
@@ -180,7 +107,7 @@ function Dominio() {
             Busque por seu domínio abaixo.
             <form
               action=""
-              className="flex shadow-2xl rounded m-3 overflow-hidden bg-white text-black md:w-[500px] md:mx-auto "
+              className="flex shadow-2xl rounded m-3 overflow-hidden bg-white text-black md:w-[500px] md:mx-auto box-border "
             >
               <input
                 type="search"
@@ -189,7 +116,7 @@ function Dominio() {
                 required
               />
               <button
-                type="submit"
+                type="button"
                 className="bg-blue-500 text-white px-3 flex-1 min-w-[100px]"
               >
                 Registrar
