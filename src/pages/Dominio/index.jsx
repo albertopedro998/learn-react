@@ -46,7 +46,7 @@ function Dominio() {
       <div className="container mx-auto  md:my-[5em]" data-aos="fade-up">
         <Text
           as="h2"
-          className={`text-xl md:text-2xl font-bold text-center p-5 mb-20 md:mb-10`}
+          className={`text-xl md:text-2xl font-bold text-center p-5 mb-10 `}
         >
           Escolha o <span className="text-blue-600 text-3xl">domínio</span> que
           pretendes e adquira na hora.
@@ -55,7 +55,7 @@ function Dominio() {
           {dominiosLista.map((item) => (
             <Card
               key={"-" + item.id}
-              className="card-dominio hover:shadow-2xl md:w-100 flex flex-col p-5 bg-white text-black justify-center items-center gap-5 rounded-md m-3 md:h-50 relative bg-linear-to-r from-blue-400 to-blue-900"
+              className="card-dominio w-100 hover:shadow-2xl flex flex-col p-5 bg-white text-black justify-center items-center gap-5 rounded-md m-3 md:h-50 relative bg-linear-to-r from-blue-400 to-blue-900"
               data-aos="slide-up"
             >
               <p className="text-2xl font-bold md:text-4xl text-white ">

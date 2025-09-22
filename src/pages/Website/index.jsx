@@ -2,10 +2,12 @@ import Card from "../Dominio/Card";
 import Titulo from "../../components/Titulo";
 import Button from "../../components/Button/Button";
 import Text from "../../components/Text";
-import fundo from "../../assets/images/people/fd.jpg";
-import { FaClosedCaptioning } from "react-icons/fa6";
+import { useState } from "react";
 
 export default function Website() {
+  const [destaqueCss, setDestaqueCss] = useState(
+    ` h-full w-full bg-[rgba(0,0,0,.5)] fixed text-white z-2 top-0 md:container font-extrabold text-center flex flex-col justify-center bottom-0 md:static md:bg-[white] md:text-gray-700 md:z-0 `
+  );
   const anunciosSites = [
     {
       id: Math.random(),
@@ -20,23 +22,29 @@ export default function Website() {
       text: "Integração com redes sociais",
     },
   ];
+
+  function fecharDestaque(ev) {
+    ev.target.className += " hidden";
+    setDestaqueCss((value) =>
+      value.replaceAll(" bg-[rgba(0,0,0,.5)] fixed text-white z-2 ", "")
+    );
+  }
   return (
     <div className="">
       <Card
         className={` min-h-[70vh] text-center flex flex-col justify-center items-center gap-7`}
       >
-        <Titulo
-          as="h2"
-          data-aos="slide-up"
-          className={` h-full w-full bg-[rgba(0,0,0,.5)] fixed top-0 text-white md:container font-extrabold text-center flex flex-col justify-center bottom-0 md:static md:bg-[white] md:text-gray-700 z-2 md:z-0 `}
-        >
+        <Titulo as="h2" data-aos="slide-up" className={destaqueCss}>
           Transforme sua ideia em um site profissional!
           <Button
             className={`bg-blue-500 m-5 p-3 max-w-100 mx-auto cursor-pointer rounded-md text-sm text-white `}
           >
             Solicitar Agora
           </Button>
-          <Button className="bg-transparent absolute top-0 right-3 md:hidden text-red-500 cursor-pointer " onClick={""}>
+          <Button
+            className="bg-transparent absolute top-0 right-3 md:hidden text-red-500 cursor-pointer "
+            onClick={fecharDestaque}
+          >
             x
           </Button>
         </Titulo>
@@ -44,7 +52,10 @@ export default function Website() {
           Criamos websites modernos, rápidos e responsivos para destacar o seu
           negócio no mundo digital.
         </Text>
-        <div className="flex gap-5 justify-center flex-wrap " data-aos="slide-up">
+        <div
+          className="flex gap-5 justify-center flex-wrap "
+          data-aos="slide-up"
+        >
           {anunciosSites.map((item) => (
             <Card
               key={item.id}

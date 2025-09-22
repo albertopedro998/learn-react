@@ -33,7 +33,7 @@ function Navbar() {
       url: "domain",
     },
   ];
-  const app = useNavigate()
+  const app = useNavigate();
   return (
     <>
       <header>
@@ -53,7 +53,7 @@ function Navbar() {
         </Link>
         <ul className={menu}>
           <button
-            style={{zIndex: `3`}}
+            style={{ zIndex: `3` }}
             className="text-2xl text-center text-red-700 absolute right-0 top-0 p-2 hover:p-3 lg:hidden"
             onClick={() =>
               setMenu((prevValue) => prevValue.replaceAll("show", "") + "hide")
@@ -63,8 +63,17 @@ function Navbar() {
           </button>
           {links.map((link) => (
             <li key={link.id}>
-              <Link to={link.url} 
-                className={`text-cyan-800 hover:border-b hover:border-cyan-800 duration-100`}>{link.nome}</Link>
+              <Link
+                to={link.url}
+                className={`text-cyan-800 hover:border-b hover:border-cyan-800 duration-100`}
+                onClick={() =>
+                  setMenu(
+                    (prevValue) => prevValue.replaceAll("show", "") + "hide"
+                  )
+                }
+              >
+                {link.nome}
+              </Link>
             </li>
           ))}
           <li>
