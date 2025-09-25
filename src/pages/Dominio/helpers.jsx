@@ -65,7 +65,7 @@ export const redesSociais = [
     name: "Whatsapp",
     icon: (
       //lg:text-green-700 lg:bg-white text-7xl lg:border lg:border-gray-300 
-      <FaWhatsapp className="rounded-[50%] w-[40px] md:w-[60px] h-[40px] md:h-[60px] md:p-2 p-1 lg:w-[50px] lg:h-[50px] lg:p-3 bg-green-700 text-white" />
+      <FaWhatsapp className="rounded-[50%] w-[50px] md:w-[60px] h-[50px] md:h-[60px] md:p-2 p-1 lg:w-[50px] lg:h-[50px] lg:p-3 bg-green-700 text-white" />
     ),
   },
   {
@@ -74,7 +74,7 @@ export const redesSociais = [
     name: "Telefone",
     icon: (
       //lg:bg-white lg:text-blue-400 text-5xl lg:border lg:border-gray-300 
-      <FaPhoneAlt className="rounded-[50%] w-[40px] md:w-[60px] h-[40px] md:h-[60px] md:p-2 p-1 text-center lg:w-[50px] lg:h-[50px] lg:p-3 bg-blue-400 text-white" />
+      <FaPhoneAlt className="rounded-[50%] w-[50px] md:w-[60px] h-[50px] md:h-[60px] md:p-2 p-2 text-center lg:w-[50px] lg:h-[50px] lg:p-3 bg-blue-400 text-white" />
     ),
   },
   {
@@ -83,7 +83,7 @@ export const redesSociais = [
     name: "Combatentes",
     icon: (
       // lg:bg-white lg:text-red-700 lg:border lg:border-gray-300 
-      <FaLocationDot className="rounded-[50%] w-[40px] md:w-[60px] h-[40px] md:h-[60px] md:p-2 p-1 lg:w-[50px] lg:h-[50px] lg:p-3 bg-red-700 text-white" />
+      <FaLocationDot className="rounded-[50%] w-[50px] md:w-[60px] h-[50px] md:h-[60px] md:p-2 p-2 lg:w-[50px] lg:h-[50px] lg:p-3 bg-red-700 text-white" />
     ),
   },
 ];
