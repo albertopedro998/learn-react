@@ -46,7 +46,7 @@ function Navbar() {
           </h1>
         </Link>
         {/*  lg:flex-row lg:static lg:justify-center lg:h-auto lg:bg-white lg:shadow-none lg:w-auto */}
-        <div className="lg:py-0 md:w-20 md:justify-between md:h-60 flex gap-1 fixed flex-col w-15 h-50  right-5 bottom-5 sm:bottom-10 md:bottom-15  px-3 py-5 z-3 justify-center items-center rounded group group:hover:shadow-2xl">
+        <div className="lg:py-0 md:w-20 md:justify-between md:h-60 flex gap-5 fixed flex-col w-15 h-50  right-5 bottom-5 sm:bottom-10 md:bottom-15  px-3 py-5 z-3 justify-center items-center rounded group group:hover:shadow-2xl">
           {/* <span className="lg:hidden absolute top-[-10px] right-[-7px] bg-red-500 p-2 box-border text-white rounded-full w-5 h-5 text-center flex justify-center items-center group">
             x
           </span> */}
