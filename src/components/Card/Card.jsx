@@ -1,11 +1,10 @@
-import Text from "../Text.jsx";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import "./Card.css";
 // import Slider from "react-slick";
 
-function Card({ className }) {
+function Card({ className, ...props }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -13,7 +12,7 @@ function Card({ className }) {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 10000,
     responsive: [
       { breakpoint: 1024, settings: { slidesToShow: 1 } },
       { breakpoint: 600, settings: { slidesToShow: 1 } },
@@ -30,8 +29,8 @@ function Card({ className }) {
       >
         <Slider {...settings} className=" md:container md:mx-auto ">
           <div key={1}>
-            <h1 className="text-white text-shadow-2xs text-5xl font-bold md:text-9xl sm:mb-5">
-              Welcome
+            <h1 className="text-white text-shadow-2xs text-5xl font-bold md:text-9xl sm:mb-5 md:w-1/2">
+              Kima Soluções
             </h1>
             <div className="conteudo sm:text-center md:text-left md:w-[500px]">
               <p className="text-white mb-2">

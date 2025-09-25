@@ -1,8 +1,8 @@
-import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/images/logotipo.jpeg";
 import "./Navbar.css";
 import { useState } from "react";
+import { redesSociais } from "../../pages/Dominio/helpers";
 
 function Navbar() {
   const [menu, setMenu] = useState("smMenu hide");
@@ -11,11 +11,6 @@ function Navbar() {
       id: 1,
       nome: "Software",
       url: "software",
-    },
-    {
-      id: 2,
-      nome: "Análise de Dados",
-      url: "dataanalitics",
     },
     {
       id: 3,
@@ -33,7 +28,6 @@ function Navbar() {
       url: "domain",
     },
   ];
-  const app = useNavigate();
   return (
     <>
       <header>
@@ -51,6 +45,39 @@ function Navbar() {
             <img src={Logo} alt="" />
           </h1>
         </Link>
+        {/*  lg:flex-row lg:static lg:justify-center lg:h-auto lg:bg-white lg:shadow-none lg:w-auto */}
+        <div className="lg:py-0 md:w-20 md:justify-between md:h-60 flex gap-1 fixed flex-col w-15 h-50  right-2 bottom-5 md:bottom-15  px-3 py-5 z-3 justify-center items-center rounded group group:hover:shadow-2xl">
+          {/* <span className="lg:hidden absolute top-[-10px] right-[-7px] bg-red-500 p-2 box-border text-white rounded-full w-5 h-5 text-center flex justify-center items-center group">
+            x
+          </span> */}
+          {redesSociais.map((item) => (
+            <div
+              key={item.id}
+              className="flex items-center gap-3 flex-1 text-gray-700 group"
+            >
+              <span>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=""
+                >
+                  {item.icon}
+                </a>
+              </span>
+
+              {/* lg:block */}
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hidden"
+              >
+                {item.name}
+              </a>
+            </div>
+          ))}
+        </div>
         <ul className={menu}>
           <button
             style={{ zIndex: `3` }}

@@ -65,11 +65,11 @@ export default function Feedback() {
             className={`p-5 flex flex-col gap-1 max-w-1/1 my-4 md:max-w-1/3 lg:max-w-1/4 `}
           >
             <figure className="flex items-center gap-5 text-gray-500 ">
-              <img
+              {/* <img
                 src={comentario.foto}
                 alt="imagem"
                 className="w-[50px] h-[50px] rounded-full border-2 border-double border-gray-100"
-              />
+              /> */}
               <figcaption>
                 <p>{comentario.autor}</p>
                 <p className="text-xs ">{comentario.tempo}</p>

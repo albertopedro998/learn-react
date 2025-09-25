@@ -66,7 +66,9 @@ export default function Diferenciais() {
         className="text-justify md:text-center my-3 max-w-[700px] mx-auto text-gray-500 "
         data-aos="slide-up"
       >
-        A Kima combina talento humano, velocidade e segurança para entregar muito mais do que tecnologia: entrega tranquilidade e valor real para empresas e pessoas
+        A Kima combina talento humano, velocidade e segurança para entregar
+        muito mais do que tecnologia: entrega tranquilidade e valor real para
+        empresas e pessoas
       </p>
 
       {/* CARACTERISTICAS */}
@@ -74,7 +76,7 @@ export default function Diferenciais() {
         {caracter.map((caracter, index) => (
           <div
             key={index}
-            className="rounded-2xl bg-blue-500 w-100 md:w-70 lg:w-100 h-50 w-max-100 h-max-100 flex flex-col justify-center items-center text-white text-2xl"
+            className="rounded-2xl bg-linear-to-r from-blue-500 to-green-300 w-100 md:w-70 lg:w-100 h-50 w-max-100 h-max-100 flex flex-col justify-center items-center text-white text-2xl"
             data-aos="slide-up"
           >
             {caracter.icon()}
