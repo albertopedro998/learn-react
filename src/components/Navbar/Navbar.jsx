@@ -104,7 +104,7 @@ function Navbar() {
             </li>
           ))}
           <li>
-            <Link className="text-white bg-blue-500 px-5 btnLog" to="#">
+            <Link className="text-white bg-blue-500 px-5 btnLog" to="/login">
               Entrar
             </Link>
           </li>

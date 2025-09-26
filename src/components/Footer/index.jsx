@@ -1,7 +1,5 @@
 import Titulo from "../Titulo";
-import Navbar from "../Navbar/Navbar";
 import {
-  FaDownLong,
   FaFacebook,
   FaWhatsapp,
   FaLinkedin,
@@ -67,7 +65,7 @@ export default function Footer() {
               placeholder="exemplo@gmail.com"
               className="w-full rounded text-black px-2 py-2 bg-white outline-0"
             />
-            <button className="w-full bg-green-600  rounded text-gray-200 p-2">
+            <button className="w-full bg-gradient-to-tl from-purple-600 to-blue-600 rounded-full font-bold text-gray-200 p-2">
               concluido
             </button>
           </form>

@@ -5,6 +5,7 @@ import Software from "./pages/Software";
 import Website from "./pages/Website";
 import Dominio from "./pages/Dominio";
 import Registar from "./pages/Dominio/Registar";
+import Login from "./pages/Login";
 
 function Router() {
   return (
@@ -17,6 +18,7 @@ function Router() {
             <Route path="/domain" element={<Dominio />}></Route>
             <Route path="/domain/registar/:id" element={<Registar />}></Route>
         </Route>
+        <Route path="/login" element={<Login />}></Route>
       </Routes>
 
     </BrowserRouter>
