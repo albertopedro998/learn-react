@@ -61,7 +61,7 @@ export default function Feedback() {
           <FaStar />
         </div>
 
-        <section className="flex">
+        <section className="flex p-2 ">
           <Input
             className=" flex-1 bg-white px-5 py-2 w-full border border-gray-50 outline-0"
             placeholder="Digite aqui o seu comentário aqui..."
